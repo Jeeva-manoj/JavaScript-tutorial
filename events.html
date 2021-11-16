@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick = "this.innerHTML = 'Bye'">Hi</button>   
+        <button onclick="change(this)">Hi</button>
+        <button id = 'button2'>Hi</button>
+        <button onmouseenter="this.innerHTML = 'Bye'" onmouseleave="this.innerHTML = 'Hi'">Hi</button>
+        <script>
+            function change(id){
+                id.innerHTML = 'Bye'
+            }
+            function change1(){
+                document.getElementById("button2").innerHTML = "Bye"
+            }
+            document.getElementById("button2").onclick = change1
+        </script>
+    </body>
+</html>

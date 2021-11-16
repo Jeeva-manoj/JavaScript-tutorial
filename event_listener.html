@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <button id = 'button1'>Hi</button>
+        <button id = 'button2'>Hi</button>
+        <button id = 'button3'>Hi</button>
+        <button id = 'button4'>Hi</button>
+        <script>
+            document.getElementById('button1').addEventListener("click", function (){this.innerHTML = 'Bye'})
+            document.getElementById('button2').addEventListener("click", change)
+            function change(){
+                document.getElementById('button2').innerHTML = 'Bye'
+            }
+            document.getElementById('button3').addEventListener("click", function (){alert('Bye')})
+            document.getElementById('button4').addEventListener("mouseenter", function (){this.innerHTML = 'Bye'})
+            document.getElementById('button4').addEventListener("mouseleave", function (){this.innerHTML = 'Hi'})
+        </script>
+    </body>
+</html>
