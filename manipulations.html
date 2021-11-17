@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <body style="padding-left: 30%; padding-right: 30%; padding-top: 10%; background-color: rgb(206, 202, 214);">
+        <script>
+            function log()
+            {
+                var first_name = document.getElementById("first_name").value
+                var last_name = document.getElementById("last_name").value
+                if (document.getElementById("rad1").checked==true)
+                    var gender = document.getElementById("rad1").value
+                else if (document.getElementById("rad2").checked==true)
+                    var gender = document.getElementById("rad2").value
+                var password = document.getElementById("pass").value
+                
+
+                if (first_name.length == 0)
+                    alert ("First Name not entered")
+                else if (last_name.length == 0)
+                    alert ("Last Name not entered")
+                else if (gender.length == 0)
+                    alert ("Gender not selected")
+                else if (password.length == 0)
+                    alert ("Password not entered")
+                else if (password.length < 8)
+                    alert ("Password should atleast contain 8 characters")
+                else
+                    alert("Login Success\n" + "Name:  " + first_name +" "+ last_name +"\nGender:  "+ gender)
+            }
+
+
+        </script>
+        <div align = "center" style="background-color:rgba(15, 17, 12, 0.205); border-radius: 30px; border-style: solid;">
+            <br>
+            <h1>Login Form</h1>
+            <form>
+                <label for="first_name">First Name</label>
+                <input type = "text", id = 'first_name', placeholder="First Name"><br><br>
+                <label for="last_name">Last Name</label>
+                <input type = "text", id = 'last_name', placeholder="Last Name"><br><br>
+                <label for="gender">Gender</label>
+                <input type="radio", name="grp1", id = "rad1", value="Male">
+                <label for="rad1">Male</label>
+                <input type="radio", name="grp1", id = "rad2", value="Female">
+                <label for="rad2">Female</label><br><br>
+                <label for="pass">Password</label>
+                <input type="password", id = "pass", placeholder="Enter password"><br><br>
+                <button id = "button", onclick="log()">Submit</button>
+                <br><br>
+
+
+            </form>
+        </div>
+    </body>
+</html>
