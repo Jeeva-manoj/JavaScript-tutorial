@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>    
+            function stop(){
+                document.getElementById("music").pause()
+                document.getElementById("video").pause()
+            }
+
+        </script>
+        <div align="center">
+            <audio src='assets/audio.mp3' id="music" controls>Audio</audio>
+            <video src='assets/video.mp4' id="video" controls>Video</video>
+            <button onclick="stop()">Pause both</button>
+            
+        </div>
+    </body>
+</html>
